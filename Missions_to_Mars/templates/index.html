@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Facts</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+    <div class='row' style="margin-top:2px;">
+
+      <div class="col-md-12">
+          <h3 style="color: blue;">Latest Mars News</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+          <h4>{{mars.news_title}}</h4>
+
+          <p>
+          <h5>{{mars.news_p}}</h5>
+          </p>
+      </div>
+    </div>
+    <div class='row' style="margin-top:2px;">
+       <!-- printing featured image -->
+       <div class="col-md-12">
+          <h3 style="color: blue;">Featured Mars Image</h3>
+        </div>
+        <div class='col-md-5 col-sm-5' >
+          <img src="{{mars.featured_image_url}}" class="img-thumbnail img-fluid"
+           alt="Mars_Featured_Image">
+        </div>
+        
+        <div class="container">
+          <div class="box" style="margin-left: 50px;">
+            {{mars.Mars_facts}}
+            <h3 style="color: blue;">Mars Facts</h3>
+            <table border="1" class="dataframe">
+              <thead>
+                <tr style="text-align: right;">
+                  <th></th>
+                  <th>Mars</th>
+                  <th>Earth</th>
+                </tr>
+                <tr>
+                  <th>Description</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Mars - Earth Comparison</th>
+                  <td>Mars</td>
+                  <td>Earth</td>
+                </tr>
+                <tr>
+                  <th>Diameter:</th>
+                  <td>6,779 km</td>
+                  <td>12,742 km</td>
+                </tr>
+                <tr>
+                  <th>Mass:</th>
+                  <td>6.39 × 10^23 kg</td>
+                  <td>5.97 × 10^24 kg</td>
+                </tr>
+                <tr>
+                  <th>Moons:</th>
+                  <td>2</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <th>Distance from Sun:</th>
+                  <td>227,943,824 km</td>
+                  <td>149,598,262 km</td>
+                </tr>
+                <tr>
+                  <th>Length of Year:</th>
+                  <td>687 Earth days</td>
+                  <td>365.24 days</td>
+                </tr>
+                <tr>
+                  <th>Temperature:</th>
+                  <td>-87 to -5 °C</td>
+                  <td>-88 to 58°C</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <div class="row">
+
+      <div class="col-md-12">
+          <h2 style="text-align: center; color:blue;">Mars hemispheres</h2>
+      </div>
+      <div class="row" style="padding: 5px;">
+        <div class=" col-md-3 col-sm-3">
+            <img src={{mars.hemisphere_image_urls[0].img_url}} class="img-thumbnail img-fluid"
+                alt="Cerberus Hemisphere">
+            <p><h3 style="text-align: center;">{{mars.hemisphere_image_urls[0].title}}</h3>
+            </p>
+        </div>
+      
+        <div class=" col-md-3 col-sm-3">
+            <img src={{mars.hemisphere_image_urls[1].img_url}} class="img-thumbnail img-fluid"
+                alt="Cerberus Hemisphere">
+            <p><h3 style="text-align: center;">{{mars.hemisphere_image_urls[1].title}}</h3>
+            </p>
+        </div>
+      
+        <div class=" col-md-3 col-sm-3">
+            <img src={{mars.hemisphere_image_urls[2].img_url}} class="img-thumbnail img-fluid"
+                alt="Cerberus Hemisphere">
+            <p><h3 style="text-align: center;">{{mars.hemisphere_image_urls[2].title}}</h3>
+            </p>
+        </div>
+     
+        <div class=" col-md-3 col-sm-3">
+            <img src={{mars.hemisphere_image_urls[3].img_url}} class="img-thumbnail img-fluid"
+                alt="Cerberus Hemisphere">
+            <p><h3 style="text-align: center;">{{mars.hemisphere_image_urls[3].title}}</h3>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+</body>
+
+</html>
